@@ -11,3 +11,6 @@ class Pokemon(models.Model):
     fronturl = models.CharField(max_length=100)
     backurl = models.CharField(max_length=100)
     hp = models.IntegerField()
+
+    def __str__(self):
+        return self.name
