@@ -16,9 +16,13 @@ Including another URLconf
 # from django.contrib import admin
 from django.conf.urls import url, include
 from . import views
+
+# ! Allows for Get and Post Requests
 from rest_framework import routers
 
 router = routers.DefaultRouter()
+# ! Allows access to data my adding '/pokemon' at the end of the url
+
 router.register('pokemon', views.PokemonView)
 
 urlpatterns = [
